@@ -38,6 +38,10 @@ bar_chart = px.bar(
     title=f'State of Selected Road Types in {", ".join(selected_towns)}',
     color_discrete_sequence=['green', 'red', 'orange']
 )
+st.write("""
+    This bar chart shows the road types in the selected towns across Lebanon. The user can choose the towns he is interested in visualizing in addition to the road types he is interested in seeing. Good insights 
+    were observed such as most of the villages in the costal areas and Mount Lebanon have good roads, but in the north and bekaa they become worse. 
+""")
 
 # Visualization 2: Pie chart for the distribution of road conditions
 pie_chart = go.Figure(
@@ -53,6 +57,9 @@ pie_chart = go.Figure(
 pie_chart.update_layout(
     title_text=f'Distribution of Selected Road Conditions in {", ".join(selected_towns)}'
 )
+st.write("""
+    This pie chart illustrates the different road types in selected towns across Lebanon. Users can choose the towns and specific road types they wish to visualize. Notable insights include that most villages in coastal areas and Mount Lebanon have well-maintained roads, while road conditions tend to deteriorate in the North and Bekaa regions.
+""")
 
 # Page content
 st.title("Road and Infrastructure Conditions in Lebanon")
